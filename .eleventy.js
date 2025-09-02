@@ -1,7 +1,6 @@
 ﻿const { DateTime } = require("luxon");
 
 module.exports = function (eleventyConfig) {
-  // copy nội dung public ra thẳng gốc site
   eleventyConfig.addPassthroughCopy({ "public": "." });
 
   eleventyConfig.addFilter("date", (value, format = "yyyy-LL-dd") => {
@@ -10,6 +9,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
+    pathPrefix: "/FreeProject/",
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
   };
 };

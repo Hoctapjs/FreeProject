@@ -19,5 +19,6 @@
     "luxon": "^3.7.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
-  }
+  },
+"build:gh": "npm run css:build && npx @11ty/eleventy --pathprefix=/FreeProject/"
 }
