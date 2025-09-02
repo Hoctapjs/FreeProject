@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/FreeProject/",
+    pathPrefix: "/",
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
   };
 };
