@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title or "My Site" }}</title>
+  <meta name="description" content="{{ description or '' }}">
+  <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body class="min-h-screen bg-white text-slate-800">
+  <header class="max-w-4xl mx-auto px-6 py-6">
+    <a href="/" class="text-xl font-bold">My Site</a>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-6">
+    {{ content | safe }}
+  </main>
+
+  <footer class="max-w-4xl mx-auto px-6 py-10 text-sm text-slate-500">
+  © {{ site.currentYear }} · Built with Eleventy.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿---
+layout: layouts/base.njk
+title: Blog
+---
+<h1 class="text-2xl font-semibold mb-6">Blog</h1>
+<ul class="space-y-3">
+  {% for post in collections.post | reverse %}
+    <li>
+      <a class="text-blue-600 underline" href="{{ post.url }}">{{ post.data.title }}</a>
+      <span class="text-slate-500 text-sm"> — {{ post.date | date("yyyy-MM-dd") }}</span>
+    </li>
+  {% endfor %}
+</ul>
