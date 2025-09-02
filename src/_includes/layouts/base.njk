@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{{ title or "My Site" }}</title>
   <meta name="description" content="{{ description or '' }}">
-  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | url }}">
+
 </head>
 <body class="min-h-screen bg-white text-slate-800">
   <header class="max-w-4xl mx-auto px-6 py-6">
