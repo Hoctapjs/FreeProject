@@ -3,14 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npx @11ty/eleventy --serve\" \"npm:css:watch\"",
-    "css:build": "tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/main.css --minify",
-    "css:watch": "tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/main.css --watch",
-    "build": "npm run css:build && npx @11ty/eleventy"
-  },
+  "dev": "concurrently \"npx @11ty/eleventy --serve\" \"npm:css:watch\"",
+  "css:build": "tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/main.css --minify",
+  "css:watch": "tailwindcss -i ./src/styles/tailwind.css -o ./public/assets/main.css --watch",
+  "build": "npm run css:build && npx @11ty/eleventy",
+  "build:gh": "npm run css:build && PATH_PREFIX=/FreeProject/ npx @11ty/eleventy"
+},
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "ISC",	
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
@@ -19,6 +20,5 @@
     "luxon": "^3.7.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17"
-  },
-"build:gh": "npm run css:build && npx @11ty/eleventy --pathprefix=/FreeProject/"
+  }
 }
